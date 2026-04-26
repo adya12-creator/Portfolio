@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section id="home" className="relative mx-auto max-w-6xl px-6 pt-28 pb-16 sm:px-10">
       <Reveal>
-        <p className="mb-5 inline-flex rounded-full border border-[var(--line)] bg-[rgba(95,183,255,0.12)] px-4 py-2 text-xs font-semibold tracking-[0.18em] text-[var(--accent)] uppercase">
+        <p className="mb-5 inline-flex rounded-full border border-[var(--line)] bg-[var(--accent-badge-bg)] px-4 py-2 text-xs font-semibold tracking-[0.18em] text-[var(--accent)] uppercase">
           Available for opportunities
         </p>
       </Reveal>
@@ -27,7 +27,7 @@ const Hero = () => {
       <Reveal className="mt-10 flex flex-wrap gap-4">
         <a
           href="#contact"
-          className="inline-flex items-center gap-2 rounded-full bg-[var(--accent)] px-6 py-3 text-sm font-semibold text-[#03111f] transition hover:translate-y-[-2px] hover:brightness-110"
+          className="inline-flex items-center gap-2 rounded-full bg-[var(--accent)] px-6 py-3 text-sm font-semibold text-[var(--on-accent)] transition hover:translate-y-[-2px] hover:brightness-110"
         >
           <HiOutlineEnvelope className="text-lg" />
           Contact Me

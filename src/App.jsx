@@ -11,6 +11,11 @@ import { navLinks } from './data/portfolioData'
 
 const App = () => {
   const [activeSection, setActiveSection] = useState('home')
+  const [theme, setTheme] = useState(() => {
+    const savedTheme = localStorage.getItem('theme')
+    if (savedTheme === 'light' || savedTheme === 'dark') return savedTheme
+    return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'
+  })
 
   const sectionIds = useMemo(() => navLinks.map((link) => link.id), [])
 
@@ -34,9 +39,18 @@ const App = () => {
     return () => observer.disconnect()
   }, [sectionIds])
 
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme)
+    localStorage.setItem('theme', theme)
+  }, [theme])
+
+  const toggleTheme = () => {
+    setTheme((prevTheme) => (prevTheme === 'dark' ? 'light' : 'dark'))
+  }
+
   return (
     <>
-      <Navbar activeSection={activeSection} />
+      <Navbar activeSection={activeSection} theme={theme} onToggleTheme={toggleTheme} />
       <main>
         <Hero />
         <About />

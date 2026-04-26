@@ -18,7 +18,7 @@ const Skills = () => {
                 {Icon ? (
                   <Icon className="text-2xl text-[var(--accent)]" />
                 ) : (
-                  <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[rgba(132,218,200,0.12)] text-xs font-bold text-[var(--accent-soft)]">
+                  <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[var(--accent-pill-bg)] text-xs font-bold text-[var(--accent-soft)]">
                     {skill.name.slice(0, 2).toUpperCase()}
                   </div>
                 )}

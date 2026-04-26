@@ -35,7 +35,7 @@ const Contact = () => {
               <label htmlFor="message" className="mb-2 block text-sm font-semibold text-[var(--text)]">Message</label>
               <textarea id="message" rows="4" required className="w-full resize-none rounded-xl border border-[var(--line)] bg-[var(--surface)] px-4 py-3 text-sm text-[var(--text)] outline-none transition focus:border-[var(--accent)]" />
             </div>
-            <button type="submit" className="w-full rounded-xl bg-[var(--accent)] px-5 py-3 text-sm font-semibold text-[#03111f] transition hover:brightness-110">Send Message</button>
+            <button type="submit" className="w-full rounded-xl bg-[var(--accent)] px-5 py-3 text-sm font-semibold text-[var(--on-accent)] transition hover:brightness-110">Send Message</button>
             {submitted && <p className="text-sm text-[var(--accent-soft)]">Message saved locally. Connect via email for direct reply.</p>}
           </form>
         </Reveal>

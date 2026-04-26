@@ -27,7 +27,7 @@ const Projects = () => {
             onClick={() => setActiveFilter(filter)}
             className={`rounded-full border px-4 py-2 text-sm font-semibold transition ${
               activeFilter === filter
-                ? 'border-[var(--accent)] bg-[rgba(95,183,255,0.16)] text-[var(--accent)]'
+                ? 'border-[var(--accent)] bg-[var(--accent-pill-bg)] text-[var(--accent)]'
                 : 'border-[var(--line)] bg-[var(--surface)] text-[var(--text-soft)] hover:border-[var(--accent-soft)]'
             }`}
           >
