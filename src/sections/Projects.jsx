@@ -14,7 +14,9 @@ const Projects = () => {
   }, [activeFilter])
 
   return (
-    <section id="projects" className="mx-auto max-w-6xl px-6 py-16 sm:px-10">
+    <section id="projects" className="relative mx-auto max-w-6xl overflow-hidden px-6 py-16 sm:px-10">
+      <div className="pointer-events-none absolute top-20 right-[-72px] h-52 w-52 rounded-full border border-[var(--line)] bg-[var(--accent-pill-bg)] blur-2xl" />
+
       <Reveal>
         <SectionTitle eyebrow="Projects" title="Selected Work" description="Project cards include role context, stack details, and deployment status." />
       </Reveal>
@@ -39,7 +41,12 @@ const Projects = () => {
       <div className="grid gap-5 md:grid-cols-2">
         {filtered.map((project) => (
           <Reveal key={project.name} className="group glass rounded-2xl p-6 transition hover:translate-y-[-4px]">
-            <h3 className="text-xl font-semibold text-[var(--text)]">{project.name}</h3>
+            <div className="mb-2 flex items-start justify-between gap-3">
+              <h3 className="text-xl font-semibold text-[var(--text)]">{project.name}</h3>
+              <span className="rounded-full border border-[var(--line)] bg-[var(--surface-2)] px-3 py-1 text-xs font-semibold text-[var(--accent)]">
+                {project.category}
+              </span>
+            </div>
             <p className="mt-4 text-base leading-7 text-[var(--text-soft)]">{project.description}</p>
 
             <div className="mt-5 flex flex-wrap gap-2">

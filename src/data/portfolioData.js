@@ -63,7 +63,7 @@ export const skills = [
   { name: 'C', icon: null },
 ]
 
-export const projectFilters = ['All', 'MERN', 'React + Node']
+export const projectFilters = ['All', 'Completed', 'Ongoing']
 
 export const projects = [
   {
@@ -71,7 +71,7 @@ export const projects = [
     description:
       'Developed a full stack alumni networking platform enabling connections, job postings, and event management with role-based access control.',
     tech: ['Node.js', 'Express.js', 'MongoDB', 'HTML', 'CSS', 'JavaScript'],
-    category: 'MERN',
+    category: 'Completed',
     liveUrl: '',
     githubUrl: '',
   },
@@ -80,7 +80,16 @@ export const projects = [
     description:
       'Built a fitness tracking app that monitors workouts, calorie intake, and BMI to help users manage their health consistently.',
     tech: ['React', 'Node.js', 'Express.js', 'PostgreSQL'],
-    category: 'React + Node',
+    category: 'Completed',
+    liveUrl: '',
+    githubUrl: '',
+  },
+  {
+    name: 'Mental Health Tracker',
+    description:
+      'A full-stack mental health tracking web application that allows users to monitor their daily mood and maintain personal journal entries in a secure and private environment. The platform focuses on simplicity, usability, and consistent self-tracking.',
+    tech: ['React', 'Node.js', 'Express.js', 'MongoDB', 'JWT'],
+    category: 'Ongoing',
     liveUrl: '',
     githubUrl: '',
   },
